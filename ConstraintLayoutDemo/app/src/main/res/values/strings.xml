@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ConstraintLayoutDemo</string>
+
+    <!-- Chapters -->
+    <string name="chapter_relative_positioning">Relative positioning</string>
+    <string name="chapter_margins">Margins</string>
+    <string name="chapter_centering_positioning">Centering positioning</string>
+    <string name="chapter_visibility_behavior">Visibility behavior</string>
+    <string name="chapter_dimension_constraints">Dimension constraints</string>
+    <string name="chapter_chains">Chains</string>
+    <string name="chapter_virtual_helpers_objects">Virtual Helpers objects</string>
+
+</resources>

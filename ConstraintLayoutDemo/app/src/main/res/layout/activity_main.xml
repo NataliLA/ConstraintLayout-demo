@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.blogspot.nataliprograms.constraintlayoutdemo.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chapter_relative_positioning"/>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.blogspot.nataliprograms.constraintlayoutdemo.views.ConstraintButton
+                android:id="@+id/button_1_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1_1"
+                app:layout_constraintRight_toLeftOf="@+id/button_1_2"/>
+
+            <com.blogspot.nataliprograms.constraintlayoutdemo.views.ConstraintButton
+                android:id="@+id/button_1_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1_2"/>
+
+            <com.blogspot.nataliprograms.constraintlayoutdemo.views.ConstraintButton
+                android:id="@+id/button_1_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1_3"
+                app:layout_constraintLeft_toRightOf="@+id/button_1_2"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraint_parent_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.blogspot.nataliprograms.constraintlayoutdemo.views.ConstraintButton
+                android:id="@+id/button_2_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2_1"
+                app:layout_constraintLeft_toLeftOf="@+id/constraint_parent_2"
+                app:layout_constraintRight_toRightOf="@+id/constraint_parent_2"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraint_parent_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.blogspot.nataliprograms.constraintlayoutdemo.views.ConstraintButton
+                android:id="@+id/button_3_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3_1"
+                app:layout_constraintTop_toTopOf="@+id/constraint_parent_3"/>
+
+            <com.blogspot.nataliprograms.constraintlayoutdemo.views.ConstraintButton
+                android:id="@+id/button_3_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="3_2"
+                app:layout_constraintTop_toBottomOf="@+id/button_3_1"/>
+
+            <com.blogspot.nataliprograms.constraintlayoutdemo.views.ConstraintButton
+                android:id="@+id/button_3_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3_3"
+                app:layout_constraintBottom_toTopOf="@+id/button_3_4"
+                app:layout_constraintLeft_toRightOf="@+id/button_3_1"/>
+
+            <com.blogspot.nataliprograms.constraintlayoutdemo.views.ConstraintButton
+                android:id="@+id/button_3_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3_4"
+                app:layout_constraintBottom_toBottomOf="@+id/constraint_parent_3"
+                app:layout_constraintLeft_toRightOf="@+id/button_3_2"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraint_parent_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.blogspot.nataliprograms.constraintlayoutdemo.views.ConstraintButton
+                android:id="@+id/button_4_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4_1"/>
+
+            <com.blogspot.nataliprograms.constraintlayoutdemo.views.ConstraintButton
+                android:id="@+id/button_4_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4_2"
+                app:layout_constraintBaseline_toBaselineOf="@+id/button_4_1"
+                app:layout_constraintStart_toEndOf="@+id/button_4_1"/>
+
+            <com.blogspot.nataliprograms.constraintlayoutdemo.views.ConstraintButton
+                android:id="@+id/button_4_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4_3"
+                app:layout_constraintStart_toStartOf="@+id/button_4_1"
+                app:layout_constraintTop_toBottomOf="@+id/button_4_1"/>
+
+            <com.blogspot.nataliprograms.constraintlayoutdemo.views.ConstraintButton
+                android:id="@+id/button_4_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4_4"
+                app:layout_constraintStart_toEndOf="@+id/button_4_1"
+                app:layout_constraintTop_toBottomOf="@+id/button_4_3"/>
+
+            <com.blogspot.nataliprograms.constraintlayoutdemo.views.ConstraintButton
+                android:id="@+id/button_4_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4_5"
+                app:layout_constraintEnd_toEndOf="@+id/button_4_4"
+                app:layout_constraintTop_toBottomOf="@+id/button_4_4"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chapter_margins"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chapter_centering_positioning"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chapter_visibility_behavior"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chapter_dimension_constraints"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chapter_chains"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chapter_virtual_helpers_objects"/>
+
+    </LinearLayout>
+</ScrollView>
